@@ -41,9 +41,16 @@ import team10, team11, team12, team13, team14
 betray = example1
 collude = example0
 
+#
 modules = [example0, example1, example2, example3, example4, example5, example6, example7,
 team0, team1, team2, team3, team4, team5, team6, team7, team8, team9, team10, 
 team11, team12, team13, team14]
+
+#Change teamlist to change what teams are playing in the tournament.
+#Most of the examples are bad, so try to fill the list with better strategies!
+#You can include more than one of a certain strategy if you think it will be popular.
+teamlist = [example0, example1, example2, example3, example4, example5]
+
 for module in modules:
     reload(module)
     print ('reloaded',module)
@@ -376,7 +383,6 @@ def post_to_file(string, filename='tournament.txt', directory=''):
     filehandle = open(filename,'w')
     filehandle.write(string)
  
-### Call main_play() if this file is executed
-if __name__ == '__main__':
-    scores, moves, reports = main_play(modules[0:4])   
-    section0, section1, section2, section3 = reports
+
+scores, moves, reports = main_play(teamlist)   
+section0, section1, section2, section3 = reports

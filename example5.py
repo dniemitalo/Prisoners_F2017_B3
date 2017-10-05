@@ -29,7 +29,7 @@ def move(my_history, their_history, my_score, their_score):
     if 'b' in their_history or len(their_history)>100: 
         return 'b'               # Betray.
     else:
-        return 'c'         # but 90% of the time collude
+        return 'c'         #  Otherwise collude
     
     
     
